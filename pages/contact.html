@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Blissful Eats with Leslie</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/ChezFur.css">
+</head>
+<body>
+    <header>
+        <h1>Blissful Eats with Leslie</h1>
+        <h2>by Leslie Chavez</h2>
+    </header>
+    <div class="flex-container">
+        <main>
+            <div class="row">
+                <div class="column left">
+                    <nav>
+                        <a href="../index.html">Home</a> |
+                        <a href="about.html">About</a> |
+                        <a href="recipes.html">Selection of Recipes</a> |
+                        <a href="contact.html">Contact</a> |
+                    </nav>
+                </div>
+                <div class="column right">
+                    <div class="contact-section">
+                        <img src="../images/huihui1.png" alt="Contact us at Blissful Eats" class="centered-image">
+                        <h1>Contact Us</h1>
+                        <p>We'd love to hear from you! Whether you have a question, a suggestion, or just want to say hi, please use the form below to get in touch. We're here to help and will respond as quickly as possible.</p>
+
+                        <div class="form-container">
+                            <form action="https://webdevbasics.net/scripts/demo.php" method="POST">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="name">Name:</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="email">Email:</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="phone">Phone:</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="pcontact">Preferred Contact:</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <select name="pcontact" id="pcontact" required>
+                                            <option value="email" selected>Email me</option>
+                                            <option value="phone_early">Phone me between 1pm - 4pm</option>
+                                            <option value="phone_late">Phone me between 6pm - 9pm</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="q_concern">Your Message:</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <textarea id="q_concern" name="Message" rows="4" placeholder="Let us know how we can help!" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <h4>Email:</h4>
+                        <p><a href="mailto:leslie@chavez.com">leslie@chavez.com</a></p>
+                        <h4>Phone:</h4>
+                        <p>888-888-888</p>
+                        <h4>Location:</h4>
+                        <p>612 Tiger Trail<br>Los Gatos, CA 95030<br>United States</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2024 Blissful Eats with Leslie</p>
+        <p><a href="mailto:leslie@chavez.com">leslie@chavez.com</a></p>
+        <!-- JavaScript to display current date in footer -->
+        <script>
+            var today = new Date();
+            var dateString = today.toDateString();
+            document.write("<p>Current Date: " + dateString + "</p>");
+        </script>
+    </footer>
+</body>
+</html>
