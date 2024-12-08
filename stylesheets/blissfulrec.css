@@ -40,7 +40,7 @@ header h2 {
 }
 
 .navbar a:hover, .navbar a.active {
-    background-color: #f7c5c1; /* Pastel peach on hover or active state */
+    background-color: #bfa2db; /* Pastel peach on hover or active state */
 }
 
 /* Main content section */
@@ -62,6 +62,38 @@ main p {
     line-height: 1.6;
 }
 
+.category {
+    text-align: center;
+    width: 30%; /* Control the width of each category box */
+    margin: 10px 0;
+}
+
+.category img {
+    width: 100%; /* Ensure the image fills the box */
+    max-width: 250px; /* Limit the maximum width */
+    height: auto; /* Keep the aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.category img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.category p {
+    font-size: 1.2em;
+    color: #f39c12; /* Warm pastel yellow for category name */
+    margin-top: 10px;
+}
+
+/* Specific image styling */
+.about-img {
+    width: 200px; /* Smaller size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    margin-top: 20px; /* Space above the image */
+}
+
 /* Footer styles */
 footer {
     background-color: #f5b7b1; /* Same pastel pink as the header */
@@ -81,4 +113,37 @@ footer a {
 
 footer a:hover {
     color: #f39c12; /* Change to pastel yellow on hover */
+}
+
+.centered-image{
+    width: 50%; /* Adjust the percentage as needed */
+    max-width: 150px; /* Maximum width to ensure it doesn't grow too large */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+}
+
+/* Form input styling */
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styling */
+button {
+    background-color: #f39c12; /* Matching warm yellow from header */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f1c40f;
 }
