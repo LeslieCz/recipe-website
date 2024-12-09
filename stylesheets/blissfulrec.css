@@ -1,3 +1,22 @@
+/* 
+Color Palette and Contrast Ratios
+
+The color palette for this project was sourced from various websites, primarily starting with W3Schools. 
+I was particularly fond of the background color, so I explored multiple sites to ensure that the colors 
+would maintain a contrast ratio of 4.1 or higher as recommended for accessibility.
+
+I used the WebAIM Contrast Checker to validate the color choices and adjusted them as needed until they 
+passed the contrast ratio requirements.
+
+Here are the key colors used in the design:
+- Body Background: #EDDCBA
+- Main Background: #C6B89C
+- Link Color: #0D0D0D
+- Hover Link Color: #B33232
+
+All text colors have been selected to provide a good contrast against the background colors to ensure readability.
+*/
+
 /* General page styles */
 body {
     font-family: Arial, sans-serif;
@@ -94,11 +113,11 @@ main p {
 }
 
 .recipe img {
-    width: 200px; /* Set a fixed width */
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image fills the dimensions without distortion */
-    border-radius: 15px; /* Rounded corners for the image */
-    transition: transform 0.3s ease; /* Smooth zoom-in on hover */
+    width: 200px; 
+    height: 200px;  
+    object-fit: cover;  
+    border-radius: 15px;  
+    transition: transform 0.3s ease;  
 }
 
 .recipe img:hover {
@@ -112,11 +131,11 @@ main p {
 }
 
 .recipe-media img {
-    width: 150px; /* Set a smaller width */
+    width: 150px; 
     height: auto; /* Maintain aspect ratio */
-    margin: 10px auto; /* Center the image and add some space */
-    display: block; /* Ensure the image behaves as a block for centering */
-    border-radius: 10px; /* Optional: Slightly rounded corners */
+    margin: 10px auto; 
+    display: block; 
+    border-radius: 10px; 
 }
 
 .category {
@@ -129,11 +148,11 @@ main p {
 }
 
 .category img {
-    width: 200px; /* Set a fixed width for the images */
-    height: 200px; /* Set a fixed height for the images */
-    object-fit: cover; /* Ensures the image fills the dimensions without distortion */
-    border-radius: 15px; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    width: 200px;  
+    height: 200px;  
+    object-fit: cover;  
+    border-radius: 15px;  
+    transition: transform 0.3s ease;  
 }
 
 .category img:hover {
@@ -149,10 +168,10 @@ main p {
 
 .about-img {
     display: block; /* Makes the image behave as a block element */
-    margin: 20px auto; /* Centers the image horizontally and adds vertical spacing */
+    margin: 20px auto;  
     width: 50%; /* Sets the width to 50% of the container */
     max-width: 300px; /* Caps the maximum size to 300px */
-    height: auto; /* Preserves the image aspect ratio */
+    height: auto;  
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
