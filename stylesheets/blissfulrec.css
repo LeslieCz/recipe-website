@@ -246,35 +246,3 @@ button:hover {
         width: 30%; /* Allow items to take up 30% width */
     }
 }
-
-/* Media query for small screens */
-@media (max-width: 749px) {
-    /* Stack navbar items vertically */
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        margin: 10px 0;
-        padding: 12px 20px;
-    }
-
-    /* Adjust recipe and category item layout for small screens */
-    .recipe, .category {
-        width: 80%; /* Makes each item 80% width for better layout */
-    }
-
-    /* Adjust image sizes for small screens */
-    .recipe img, .category img {
-        width: 100%; /* Make the images full width */
-        height: auto; /* Adjust the height automatically */
-    }
-
-    /* Adjust main content layout for small screens */
-    main {
-        margin: 10px;
-        padding: 10px;
-    }
-}
