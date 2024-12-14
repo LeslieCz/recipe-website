@@ -137,12 +137,14 @@ main p {
     margin-top: 10px; /* Add space between the image and the text */
 }
 
+/* Default styling for small screens */
 .recipe-media img {
-    width: 150px; 
+    width: 100%; 
     height: auto; /* Maintain aspect ratio */
     margin: 10px auto; 
     display: block; 
     border-radius: 10px; 
+    max-width: 150px; /* Restrict the maximum width to 150px */
 }
 
 /* Default: Vertical layout for small screens */
@@ -326,6 +328,39 @@ button:hover {
     margin: 0 auto;  /* Centering the form */
 }
 
+/* Flex container setup */
+.flex-container {
+    display: flex;
+    justify-content: space-between;  /* Ensures columns have space between them */
+    gap: 20px; /* Adds space between the columns */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Create two columns */
+.column {
+    padding: 10px;
+    box-sizing: border-box; /* Prevents padding from affecting the column width */
+}
+
+/* Left column styles */
+.left {
+    flex: 1 1 60%; /* Left column takes up 60% of the space */
+    min-width: 300px; /* Ensure it doesn’t get too narrow */
+}
+
+/* Right column styles */
+.right {
+    flex: 1 1 35%; /* Right column takes up 35% of the space */
+    min-width: 250px; /* Ensure it doesn’t get too narrow */
+    box-sizing: border-box; /* Prevents padding from affecting the column width */
+    padding: 20px;
+    background-color: #d74299; /* Cornsilk background for a paper-like effect */
+    border: 2px solid #b43188; /* Goldish border */
+    margin: 10px auto; /* Center the section */
+    border-radius: 20px; /* Rounded corners */
+    background-image: url("../images/bcgk.png"); /* Paper background image from canva */
+}
+
 
 /* Media query for large screens */
 @media (min-width: 750px) {
@@ -421,5 +456,9 @@ button:hover {
     .form-container {
         max-width: 600px;  /* Limit width of form on large screens */
         padding: 20px;  /* Maintain some padding */
+    }
+
+    .flex-container {
+        justify-content: flex-start; /* Align columns to the start */
     }
 }
