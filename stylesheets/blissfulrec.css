@@ -281,12 +281,28 @@ button:hover {
     border-radius: 8px 8px 0 0; /* Rounds the top corners of the images to match the card */
 }
 
-
 .recipe-card p {
     margin: 10px 0;
     font-size: 1rem;
     color: #555;
 }
+
+/* Default styles for smaller screens */
+.sponsor-gallery {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow images to wrap if necessary */
+    margin: 40px;
+    text-align: center; /* Center the sponsor text */
+}
+
+.sponsor-gallery img {
+    width: 100px; /* Set image width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px; /* Add margin between images */
+    display: block; /* Ensure images are block elements */
+}
+
 
 /* Media query for large screens */
 @media (min-width: 750px) {
@@ -356,5 +372,21 @@ button:hover {
         margin-top: 15px; /* Adds spacing between image and text */
         font-size: 1.2rem; /* Sets a readable font size for the text */
         text-align: center; /* Centers the text */
+    }
+
+    .sponsor-gallery {
+        justify-content: center; /* Center images horizontally */
+        flex-direction: row; /* Align images horizontally */
+        align-items: center; /* Vertically center images */
+        flex-wrap: nowrap; /* Prevent images from wrapping */
+    }
+
+    .sponsor-gallery img {
+        width: 6500px; /* Increase image width on larger screens */
+        margin: 10px; /* Increase space between images */
+    }
+
+    .sponsor-gallery h3 {
+        font-size: 2rem; /* Increase font size of the heading */
     }
 }
