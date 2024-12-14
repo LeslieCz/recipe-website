@@ -102,30 +102,29 @@ main p {
     margin-top: 30px;
 }
 
-/* Recipes Section Layout */
+/* Recipe Layout for both small and large screens */
 .recipes {
     display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap if needed */
-    justify-content: center; /* Centers the content horizontally */
+    flex-wrap: wrap; /* Allows items to wrap to new rows */
+    justify-content: center; /* Centers content horizontally */
     gap: 20px; /* Adds space between items */
-    margin-top: 30px;
+    margin-top: 30px; /* Adds space at the top */
 }
 
+/* Individual recipe card */
 .recipe {
-    text-align: center;
-    width: 90%; /* Adjust width for small screens */
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center-align text below the image */
+    width: 100%; /* Default full width on small screens */
+    box-sizing: border-box; /* Prevents padding from affecting the width */
+    text-align: center; /* Centers the text inside each card */
 }
 
+/* Ensures images are uniform, maintaining their shape and rounded corners */
 .recipe img {
-    width: 200px; 
-    height: 200px;  
-    object-fit: cover;  
-    border-radius: 15px;  
-    transition: transform 0.3s ease;  
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Keeps images at a consistent size */
+    border-radius: 15px; /* Rounded corners */
+    object-fit: cover; /* Ensures images maintain their aspect ratio */
 }
 
 .recipe img:hover {
@@ -322,12 +321,40 @@ button:hover {
     }
 
     .recipes {
-        flex-wrap: nowrap; /* Prevent wrapping */
-        justify-content: space-between; /* Space out the items horizontally */
+        flex-wrap: nowrap; /* No wrapping on larger screens */
+        justify-content: space-between; /* Distributes space evenly */
     }
 
+    .recipes {
+        flex-wrap: wrap; /* Allows items to wrap to new rows */
+        justify-content: space-evenly; /* Distributes space evenly, centering items */
+    }
+
+    /* Adjust individual recipe cards */
+    .recipes {
+        flex-wrap: wrap; /* Allows items to wrap to new rows */
+        justify-content: space-evenly; /* Distributes space evenly, centering items */
+    }
+
+    /* Adjust individual recipe cards */
     .recipe {
-        width: 30%; /* Set the width of each recipe to be 30% for 3 columns */
-        flex-direction: row; /* Arrange images and text horizontally */
+        width: 45%; /* Two columns on large screens */
+        display: flex;
+        flex-direction: column; /* Arrange image and text vertically */
+        align-items: center; /* Center the items */
+        justify-content: center; /* Center the items vertically */
+    }
+
+    /* Ensure the image sizes are the same */
+    .recipe img {
+        width: 200px; /* Set both images to have the same width */
+        height: 200px; /* Set both images to have the same height */
+        object-fit: cover; /* Ensures the images fill the container without distortion */
+    }
+
+    .recipe p {
+        margin-top: 15px; /* Adds spacing between image and text */
+        font-size: 1.2rem; /* Sets a readable font size for the text */
+        text-align: center; /* Centers the text */
     }
 }
