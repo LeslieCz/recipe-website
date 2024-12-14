@@ -328,10 +328,11 @@ button:hover {
     margin: 0 auto;  /* Centering the form */
 }
 
-/* Flex container setup */
+/* Flex container setup for all screen sizes */
 .flex-container {
     display: flex;
-    justify-content: space-between;  /* Ensures columns have space between them */
+    flex-direction: column;  /* Stack columns vertically by default (small screens) */
+    justify-content: flex-start;  /* Align columns at the top */
     gap: 20px; /* Adds space between the columns */
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
@@ -344,15 +345,14 @@ button:hover {
 
 /* Left column styles */
 .left {
-    flex: 1 1 60%; /* Left column takes up 60% of the space */
+    flex: 1 1 100%; /* Full width on small screens */
     min-width: 300px; /* Ensure it doesn’t get too narrow */
 }
 
 /* Right column styles */
 .right {
-    flex: 1 1 35%; /* Right column takes up 35% of the space */
+    flex: 1 1 100%; /* Full width on small screens */
     min-width: 250px; /* Ensure it doesn’t get too narrow */
-    box-sizing: border-box; /* Prevents padding from affecting the column width */
     padding: 20px;
     background-color: #d74299; /* Cornsilk background for a paper-like effect */
     border: 2px solid #b43188; /* Goldish border */
@@ -459,6 +459,26 @@ button:hover {
     }
 
     .flex-container {
+        flex-direction: row;  /* Columns will be side by side */
         justify-content: flex-start; /* Align columns to the start */
+    }
+
+    /* Left column styles */
+    .left {
+        flex: 1 1 60%; /* Left column takes up 60% of the space */
+        min-width: 300px; /* Ensure it doesn’t get too narrow */
+    }
+
+    /* Right column styles */
+    .right {
+        flex: 1 1 35%; /* Right column takes up 35% of the space */
+        min-width: 250px; /* Ensure it doesn’t get too narrow */
+        padding: 15px; /* Reduce padding to make the section shorter */
+        margin: 10px auto; /* Center the section */
+        height: 80px; /* Set a fixed height to make it shorter */
+        background-color: #d74299; /* Cornsilk background for a paper-like effect */
+        border: 2px solid #b43188; /* Goldish border */
+        border-radius: 20px; /* Rounded corners */
+        background-image: url("../images/bcgk.png"); /* Paper background image from canva */
     }
 }
