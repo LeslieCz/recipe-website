@@ -113,7 +113,7 @@ main p {
 
 .recipe {
     text-align: center;
-    width: 30%; /* Adjust width to fit in the layout */
+    width: 90%; /* Adjust width for small screens */
     margin: 10px 0;
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
@@ -146,13 +146,21 @@ main p {
     border-radius: 10px; 
 }
 
+/* Default: Vertical layout for small screens */
+.category-container {
+    display: flex;
+    flex-direction: column; /* Stack categories vertically */
+    align-items: center; /* Center categories in the container */
+    gap: 20px; /* Space between categories */
+}
+
 .category {
     text-align: center;
-    width: 30%; /* Controls the width of each category box */
+    width: 90%; /* Adjust width to fit smaller screens */
     margin: 10px 0;
     display: flex;
-    flex-direction: column; /* Ensures the image and text stack vertically */
-    align-items: center; /* Centers the text below the image */
+    flex-direction: column; /* Image and text stack vertically */
+    align-items: center; /* Center text below the image */
 }
 
 .category img {
@@ -293,19 +301,6 @@ button:hover {
         padding: 12px 20px;
     }
 
-    .recipe, .category {
-        width: 30%; /* Allow items to take up 30% width */
-    }
-
-    .recipe-card {
-        width: 250px;
-    }
-
-    .recipe-gallery {
-        flex-direction: row; /* Horizontal layout */
-        justify-content: center;
-    }
-
     .navbar {
         flex-direction: row; /* Horizontal layout */
         justify-content: center; /* Center links horizontally */
@@ -314,5 +309,25 @@ button:hover {
 
     .navbar a {
         width: auto; /* Reset width to default */
+    }
+
+    .category-container {
+        flex-direction: row; /* Arrange categories horizontally */
+        justify-content: center; /* Center categories horizontally */
+        gap: 30px; /* Adjust spacing between categories */
+    }
+
+    .category {
+        width: 30%; /* Consistent width for categories */
+    }
+
+    .recipes {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between; /* Space out the items horizontally */
+    }
+
+    .recipe {
+        width: 30%; /* Set the width of each recipe to be 30% for 3 columns */
+        flex-direction: row; /* Arrange images and text horizontally */
     }
 }
