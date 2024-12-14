@@ -320,6 +320,12 @@ button:hover {
     border-radius: 8px;    /* Optional: Adds rounded corners to the border */
 }
 
+.form-container {
+    max-width: 100%;  /* Full width by default */
+    padding: 20px;
+    margin: 0 auto;  /* Centering the form */
+}
+
 
 /* Media query for large screens */
 @media (min-width: 750px) {
@@ -410,5 +416,10 @@ button:hover {
     .video-section video {
         max-width: 40%;    /* Allow the video to take up full width on larger screens */
         height: auto;       /* Maintain the aspect ratio */
+    }
+
+    .form-container {
+        max-width: 600px;  /* Limit width of form on large screens */
+        padding: 20px;  /* Maintain some padding */
     }
 }
