@@ -4,41 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Blissful Eats with Leslie</title>
-    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" type="text/css" href="../stylesheets/blissfulrec.css">
 </head>
 <body>
-    <!-- Header section with site title and navigation links -->
     <header>
         <h1>Blissful Eats with Leslie</h1>
         <h2>By Leslie Chavez</h2>
 
-        <!-- Navigation menu -->
         <nav class="navbar">
-            <a href="../index.html">Home</a> 
-            <a href="about.html">About</a> 
-            <a href="recipes.html">Selection of Recipes</a> 
-            <a href="contact.html" class="active">Contact</a> 
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="recipes.html">Selection of Recipes</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
 
-    <!-- Main content section, using a flex container to arrange elements -->
     <div class="flex-container">
         <main>
             <div class="row">
                 <div class="column left">
                     <div class="contact-section">
-                        <!-- Image representing the contact section -->
                         <img src="../images/logo.png" alt="Contact Blissful Eats" class="centered-image">
 
-                        <!-- Section title and description for users -->
                         <h1>Let's Talk Recipes!</h1>
                         <p>Have a question about a recipe, need cooking tips, or want to share your latest culinary masterpiece? We'd love to hear from you! Fill out the form below to reach out, and we'll get back to you as soon as possible. Let's cook something amazing together!</p>
 
-                        <!-- Form section for users to fill out -->
                         <div class="form-container">
                             <form action="https://webdevbasics.net/scripts/demo.php" method="POST">
-                                <!-- Name input field -->
                                 <div class="row">
                                     <div class="col-25">
                                         <label for="name">Name:</label>
@@ -48,7 +40,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Email input field -->
                                 <div class="row">
                                     <div class="col-25">
                                         <label for="email">Email:</label>
@@ -58,7 +49,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Phone number input field with pattern validation -->
                                 <div class="row">
                                     <div class="col-25">
                                         <label for="phone">Phone:</label>
@@ -68,7 +58,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Preferred contact method selection -->
                                 <div class="row">
                                     <div class="col-25">
                                         <label for="pcontact">Preferred Contact:</label>
@@ -82,7 +71,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Message input field -->
                                 <div class="row">
                                     <div class="col-25">
                                         <label for="q_concern">Message:</label>
@@ -92,19 +80,16 @@
                                     </div>
                                 </div>
 
-                                <!-- Submit button for the form -->
                                 <div class="row">
                                     <button type="submit">Send Message</button>
                                 </div>
                             </form>
                         </div>
 
-                        <!-- Contact information section -->
                         <div class="contact-info">
                             <h4>Contact Us:</h4>
                             <p>Have a cooking question? We’re here to help! Reach out anytime!</p>
                             <h4>Email Us:</h4>
-                            <!-- Email link to send an email directly -->
                             <p><a href="mailto:leslie@chavez.com">leslie@chavez.com</a></p>
                             <h4>Call Us:</h4>
                             <p>888-888-888</p>
@@ -115,16 +100,25 @@
         </main>
     </div>
 
-    <!-- Footer section with copyright and dynamic date -->
+    <!-- Sponsor Section -->
+    <div class="sponsor-gallery">
+        <h3>Our Sponsors</h3>
+        <a href="https://www.gordonramsay.com/" target="_blank">
+            <img src="../images/masterchf.png" alt="gordonramsay" style="width: 100px; height: auto;">
+        </a>
+
+        <a href="https://joebastianich.com/en/ristoranti/" target="_blank">
+            <img src="../images/joe.png" alt="joe" style="width: 100px; height: auto;">
+        </a>
+
+        <a href="https://dinnerwithluca.com/" target="_blank">
+            <img src="../images/luca.png" alt="Luca Resturant" style="width: 100px; height: auto;">
+        </a>
+    </div>
+
     <footer>
         <p>&copy; 2024 Blissful Eats with Leslie</p>
         <p><a href="mailto:leslie@chavez.com">leslie@chavez.com</a></p>
-        <script>
-            // JavaScript to display the current date
-            var today = new Date();
-            var dateString = today.toDateString();
-            document.write("<p>Current Date: " + dateString + "</p>");
-        </script>
     </footer>
 </body>
 </html>
