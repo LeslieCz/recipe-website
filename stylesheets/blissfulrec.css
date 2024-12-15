@@ -32,13 +32,13 @@ body {
 /* Header styles */
 header {
     background-color: #f5b7b1; /* Pastel pink */
-    padding: 20px;
-    text-align: center;
-    background-size: contain;
+    min-height: 50px;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 200px;
+    background-size: contain;
+    background-position: center right;
     background-image: url(../images/smalllogo.png);
+    background-size: 100px 100px; /* Adjust size of the logo */
+
 }
 
 header h1 {
@@ -71,6 +71,26 @@ header h2 {
     text-align: center; /* Center text inside buttons */
     display: block; /* Maintain button-like appearance */
     min-width: 120px; /* Set a consistent minimum width */
+}
+
+/* Navigation container */
+.navcontainer {
+    display: flex; /* Enable flexbox */
+    flex-direction: row; /* Default to vertical for large screens */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Navigation link styles */
+.navcontainer a {
+    color: #ad2e2e; /* Original link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, font-size 0.3s;
+    display: block; /* Makes the entire area of the link clickable */
+    width: 100px; /* Set a width for the navigation links */
+    margin: 10px; /* Vertical space between links */
+    padding: 10px; /* Padding for space around the text */
+    text-align: center; /* Center the text within the "button" */
+    background-color: #d8d8d8; /* Background color for button appearance */
 }
 
 .navcontainer a:hover {
@@ -414,6 +434,11 @@ button:hover {
     grid-row: span 2; /* Large image spans 2 rows */
 }
 
+/* Centering text in header and navigation */
+header, .navcontainer {
+    text-align: center; /* Horizontally center the text */
+}
+
 /* Media query for large screens */
 @media (min-width: 750px) {
     body {
@@ -423,12 +448,23 @@ button:hover {
 
     header{
         background-image: url(../images/largelogo.png);
+        min-height: 50px;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        background-size: 100px 100px; /* Adjust size of the logo */
     }
 
     header h1 {
         margin-top: 10px;
         font-size: 2rem; /* Adjust text size as needed */
       }
+
+      /* Adjust navigation container for larger screens */
+    .navcontainer {
+        flex-direction: column; /* Change to vertical for large screens */
+        align-items: center; /* Center items horizontally */
+    }
 
     .navbar {
         flex-direction: row; /* Change to vertical for large screens */
