@@ -50,13 +50,8 @@ header h2 {
 /* Default: Vertical layout for small screens */
 .navbar {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: row; /* Stack links vertically */
     align-items: center; /* Center links in the vertical stack */
-    gap: 10px; /* Add spacing between links */
-    margin-top: 20px;
-    padding: 10px 0;
-    width: 100%;  /* Ensure nav bar stretches across the entire screen */
-    box-sizing: border-box;  /* Prevent padding from making the nav bar too wide */
 }
 
 .navbar a {
@@ -65,16 +60,22 @@ header h2 {
     padding: 8px 12px; /* Uniform padding */
     background-color: #a3c9e2; /* Soft pastel blue */
     border-radius: 5px;
-    margin: 0 10px;
-    width: auto; /* Prevent buttons from stretching */
+    margin: 10px;
+    padding: 10px; /* Padding for space around the text */
+    width: 100; /* Prevent buttons from stretching */
     text-align: center; /* Center text inside buttons */
-    display: inline-block; /* Maintain button-like appearance */
+    display: block; /* Maintain button-like appearance */
     min-width: 120px; /* Set a consistent minimum width */
 }
 
-/* Hover and active states */
-.navbar a:hover, .navbar a.active {
-    background-color: #bfa2db; /* Pastel peach on hover or active state */
+.navcontainer a:hover {
+    color: #bfa2db; /* Updated hover color */
+    font-size: 1.1em; /* Increase size on hover */
+}
+
+.navcontainer a:focus {
+    outline: none; /* Remove default outline for focused links */
+    border-bottom: 2px solid rgb(255, 71, 172); /* Add an underline effect on focus */
 }
 
 /* Main content section */
@@ -369,23 +370,22 @@ button:hover {
 /* Media query for large screens */
 @media (min-width: 750px) {
     .navbar {
-        display: flex;
+        flex-direction: row; /* Change to vertical for large screens */
         justify-content: center;
     }
 
     .navbar a {
-        margin: 0 20px;
-        padding: 12px 20px;
+        display: block; /*Vertical navigation bar for large screen*/
+        margin: 10px;
+        width: 100px; /*Width for button appearance*/
+        padding: 10px;
+        text-align: center; /*Center the text within the "button"*/
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
     }
 
-    .navbar {
-        flex-direction: row; /* Horizontal layout */
-        justify-content: center; /* Center links horizontally */
-        gap: 10px; /* Add spacing between links */
-    }
-
-    .navbar a {
+    .navbar a:hover{
         width: auto; /* Reset width to default */
+        background-color: #bfa2db;
     }
 
     .category-container {
