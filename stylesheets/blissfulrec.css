@@ -50,7 +50,7 @@ header h2 {
 /* Default: Vertical layout for small screens */
 .navbar {
     display: flex;
-    flex-direction: row; /* Stack links vertically */
+    flex-direction: column; /* Stack links vertically */
     align-items: center; /* Center links in the vertical stack */
 }
 
