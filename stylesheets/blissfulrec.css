@@ -54,6 +54,9 @@ header h2 {
     align-items: center; /* Center links in the vertical stack */
     gap: 10px; /* Add spacing between links */
     margin-top: 20px;
+    padding: 10px 0;
+    width: 100%;  /* Ensure nav bar stretches across the entire screen */
+    box-sizing: border-box;  /* Prevent padding from making the nav bar too wide */
 }
 
 .navbar a {
@@ -62,6 +65,7 @@ header h2 {
     padding: 8px 12px; /* Uniform padding */
     background-color: #a3c9e2; /* Soft pastel blue */
     border-radius: 5px;
+    margin: 0 10px;
     width: auto; /* Prevent buttons from stretching */
     text-align: center; /* Center text inside buttons */
     display: inline-block; /* Maintain button-like appearance */
